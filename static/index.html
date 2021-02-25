@@ -1,0 +1,12 @@
+<!DOCTYPE html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width">
+</head><body>
+<div id=divname></div>
+<script type=module>
+import { fetchJSON } from "https://js.sabae.cc/fetchJSON.js";
+window.onload = async () => {
+  const data = await fetchJSON("api/test", { name: "jig", age: 17} );
+  divname.textContent = data.name;
+  console.log(data);
+};
+</script>
+</body></html>
